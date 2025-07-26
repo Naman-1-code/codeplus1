@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎉 Reward Tree</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="reward2.css"/>
+    
+  </head>
+  <body>
+   <div class="background">
+  <img src="https://i.pinimg.com/originals/32/cb/47/32cb4711aaef26ad0c0da043c1bf6fff.jpg" alt="Reward Tree" />
+   <div class="light-overlay"></div>
+</div>
+
+
+    <div class="overlay"></div>
+    <div class="map-container">
+      <div class="level-banner">🎉 CONGRATULATIONS 🎉</div>
+      <h2 class="celebration">You have grown your Reward Tree!</h2>
+      <div class="coin-chest"></div>
+      <button class="claim-btn">CLAIM REWARD</button>
+      <button class="claim-btn"><a href="/">Home</a></button>
+    </div>
+
+    <!-- Confetti from Canvas Confetti CDN -->
+    <canvas class="confetti"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+      // Launch celebration confetti
+      const canvas = document.querySelector('.confetti');
+      const myConfetti = confetti.create(canvas, { resize: true, useWorker: true });
+
+      setInterval(() => {
+        myConfetti({
+          particleCount: 50,
+          spread: 80,
+          origin: { y: 0.6 },
+        });
+      }, 2000);
+    </script>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Congratulation !! You Grow Your Reward Tree </h1>
+    <h1> Proud MoveMent  you have 3 time sumbit 100% work </h1>
+    <h1> Keep Going Bro</h1>
+    <img src="https://image.shutterstock.com/z/stock-vector-abstract-tree-with-ribbons-for-your-design-118308859.jpg" alt="image"> 
+</body>
+</html> -->

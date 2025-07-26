@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="refresh" content="5; url=/profile" />
+  <title>Leaf Earned!</title>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <link rel="stylesheet" href="leaf.css"/>
+  
+</head>
+<body>
+  🎉 Yeahh! You earned a leaf!
+
+  <script>
+    // Confetti burst from center
+    confetti({
+      particleCount: 200,
+      spread: 100,
+      origin: { y: 0.6 }
+    });
+
+    // Optional: Repeat after a short delay
+    setTimeout(() => {
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.4 }
+      });
+    }, 2000);
+  </script>
+</body>
+</html>
+

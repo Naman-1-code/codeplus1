@@ -1,0 +1,269 @@
+
+
+    :root {
+      --primary-bg: linear-gradient(135deg, #7f00ff, #e100ff);
+      --card-bg: rgba(255, 255, 255, 0.1);
+      --text-light: #ffffff;
+      --text-dark: #000000;
+      --sidebar-bg: rgba(255, 255, 255, 0.08);
+      --button-bg: #ffffff;
+      --button-text: #7f00ff;
+    }
+
+a {
+  text-decoration: none;    
+  color: inherit;           
+}
+
+  i {
+    color:#ff4d4d; 
+  }
+
+
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--primary-bg);
+      color: var(--text-light);
+    }
+
+    .dashboard {
+      display: flex;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 240px;
+      background: var(--sidebar-bg);
+      backdrop-filter: blur(8px);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar h2 {
+      font-size: 1.8em;
+      margin-bottom: 2rem;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar li {
+      padding: 12px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 10px;
+      transition: background 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sidebar li:hover {
+      background: #ff4d4d;
+      /* background: rgba(255, 255, 255, 0.1); */
+    }
+
+    .content {
+      flex: 1;
+      padding: 30px;
+      overflow-y: auto;
+    }
+
+    header {
+      /* display: flex;
+      justify-content: space-between;
+      align-items: center; */
+      margin-bottom: 30px;
+    }
+
+#box{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 200px;
+  width: 450px;
+  border: 2px solid black;
+  background-color: #ff4d4d;
+  border-radius: 30px;
+  overflow-y: auto;
+
+
+}
+#box::-webkit-scrollbar{
+    width: 8px;
+}
+/* .box::-webkit-scrollbar-track{
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+.box::-webkit-scrollbar-thumb{
+    background: #888;
+     border-radius: 10px;
+}
+ .box::-webkit-scrollbar-thumb:hover{
+    background: #555;
+ } */
+
+ .arrange{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} 
+/* Style each task */
+#box li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 25px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Task text (inside span) */
+#box li span {
+  font-size: 1rem;
+  color: white;
+  flex: 1;
+}
+
+/* Right-side controls */
+#box li div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Trash icon */
+#box li i.fa-trash {
+  color: #ff4d4d;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* Checkbox */
+#box li input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+
+
+    /* .task-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .task-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    } */
+
+.element{
+    width: 450px;
+   
+}
+
+    input[type="text"],
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 10px;
+      margin-right: 10px;
+      
+    }
+
+    button {
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      font-weight: bold;
+      cursor: pointer;
+      
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #e0e0e0;
+    }
+
+    .toggle-mode {
+      cursor: pointer;
+      padding: 5px 10px;
+      background: #fff;
+      color: #333;
+      border-radius: 8px;
+      font-size: 0.9em;
+    }
+
+
+.tracker-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  margin-left: 20px;
+}
+
+.tracker {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #1a1a1a 40%, #2e2e2e 100%);
+  box-shadow: 0 0 25px rgba(155, 99, 255, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.05);
+  position: relative;
+  border: 6px solid transparent;
+  background-clip: padding-box;
+}
+
+.tracker::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #9f7aea 0% 30%, /* Adjust % here to match value */
+   #2e2e2e 30% 100%
+  ); 
+    
+  z-index: -1;
+}
+
+.tracker-value {
+  font-size: 32px;
+  font-weight: bold;
+  color: #9f7aea;
+  text-align: center;
+  line-height: 150px;
+}
+
+.tracker-label {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #ccc;
+  font-weight: 500;
+}
+
+footer{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#reset{
+  background-color: #e0e0e0;
+  margin-bottom: 10px;
+
+}

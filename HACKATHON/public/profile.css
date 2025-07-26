@@ -1,0 +1,45 @@
+.profilebox {
+  border: 2px solid black;
+  padding: 10px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  background: #f9f9f9;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 6px;
+  width: 80px;
+  background: #fff;
+}
+
+.colour {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+/* Dynamic color classes */
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: gold;
+}
+
+.green {
+  background-color: green;
+}
+
+.progress-text {
+  font-size: 0.9rem;
+}

@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+
+</head>
+<body>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <h2 style="padding: 0px; margin-bottom:8px; color: #ff4d4d;">🌿 CodePlus</h2>
+   
+      <% if (username) { %>
+  <h3 style="padding-left: 20px; margin: 5px; font-weight: 700;">Hi, <%= username %> 👋</h3>
+  <p style="padding-left: 20px; margin: 5px; font-weight: 700;">Code. Consistent. Conquer.</p>
+<% } else { %>
+  <p >Welcome to CodePlus</p>
+<% } %>
+
+
+
+      <ul>
+        <li><i class="fa-solid fa-arrow-right-to-bracket"></i> <a href="/login"> Log-In</a> </li>
+        <li><i class="fas fa-home"></i>Home</a></li>
+        <li><i class="fas fa-user"></i> <a href="/profile"> Profile </a></li>
+        <li><i class="fas fa-tree"></i>
+ <a href="/reward" class="text-white no-underline hover:underline"> Reward Tree</a></li>
+        <li><i class="fas fa-tasks"></i> Tasks</li>
+        <li><i class="fas fa-music"></i> Music</li>
+        <li><i class="fas fa-comment"></i> Posts</li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <header style="margin-bottom: 10px;">
+        <h1 style="font-weight: 700;"> Task Dashboard</h1>
+        <div class="element">
+          <input type="text" id="Task" placeholder="Enter a task" />
+          <button id="Add">Add Task</button>
+          <span class="toggle-mode" onclick="toggleTheme()">🌓 Toggle Mode</span>
+        </div>
+      </header>
+<div class="arrange">
+<div class="left">
+<ul id="box" class="task-list">
+  <!-- <li> elements created by JS go here -->
+    
+</ul>
+ <form action="/submit-progress" method="POST">
+  <label for="workdone">Today's Progress (%):</label>
+  <input type="number" name="workdone" id="workdone" min="0" max="100" required>
+  <button class="summbit" type="submit">Submit Progress</button>
+</form>
+</div>
+
+<div class="right">
+<div class="tracker-container">
+  <div class="tracker">
+    <div class="tracker-value">0%</div>
+  </div>
+  <p class="tracker-label">Daily Progress</p>
+</div>
+</div>
+
+</div>
+      
+
+
+
+
+
+      <footer style="margin-top: 5px;">
+        <div style="background: #ff4d4d; border-radius: 20px; padding: 15px; width: 120px; text-align: center; font-weight: 700;">
+          Enter Progress
+        </div>
+
+        <form action="/reset-progress" method="GET">
+  <button  id="reset" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-xl">
+    🔄 Reset Progress
+  </button>
+</form>
+
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const root = document.documentElement;
+      const isDark = root.style.getPropertyValue('--primary-bg').includes('#7f00ff');
+      if (isDark) {
+        root.style.setProperty('--primary-bg', '#f5f5f5');
+        root.style.setProperty('--text-light', '#000');
+        root.style.setProperty('--card-bg', '#fff');
+        root.style.setProperty('--sidebar-bg', '#eee');
+        root.style.setProperty('--button-text', '#000');
+      } else {
+        root.style.setProperty('--primary-bg', 'linear-gradient(135deg, #7f00ff, #e100ff)');
+        root.style.setProperty('--text-light', '#fff');
+        root.style.setProperty('--card-bg', 'rgba(255, 255, 255, 0.1)');
+        root.style.setProperty('--sidebar-bg', 'rgba(255, 255, 255, 0.08)');
+        root.style.setProperty('--button-text', '#7f00ff');
+      }
+    }
+  </script>
+
+ <!-- </body>
+</html> --> 
+
+  <!-- <div class="container"> 
+   <div class="content"> 
+        
+    <a href="#" id="reward-link">Reward Tree</a>
+    <a href="/profile" >profile</a>
+
+
+<form>
+        <input  id="Task" type="text" placeholder="Enter Your Task" name="Task"/>
+       <button id="Add" type="button"> ADD TASK</button>
+    </form>
+
+    <ul class="box"> 
+      
+    </ul>
+    
+   <button class="summbit">Summbit</button>
+   </div> 
+
+   <div class="image">
+       <div class="circle">
+       </div>
+   </div> --> 
+
+ <!-- </div>  -->
+
+<script src="tracker/tracker.js"></script>
+<script src="script.js"> </script>
+</body>
+</html>

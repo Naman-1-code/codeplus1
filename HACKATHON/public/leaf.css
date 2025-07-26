@@ -1,0 +1,13 @@
+
+body {
+      background: linear-gradient(to right, #7f5af0, #8b5cf6);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-size: 2.5rem;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+    }
+
